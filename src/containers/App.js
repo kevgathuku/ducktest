@@ -5,7 +5,7 @@ import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from '../act
 import Picker from '../components/Picker'
 import Posts from '../components/Posts'
 
-class App extends Component {
+export class App extends Component {
   static propTypes = {
     selectedSubreddit: PropTypes.string.isRequired,
     posts: PropTypes.array.isRequired,
