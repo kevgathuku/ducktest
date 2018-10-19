@@ -18,10 +18,14 @@ export const requestPosts = subreddit => ({
   subreddit
 })
 
+export const transformResponseBody = (json) => {
+  return json.data.children.map(child => child.data);
+}
+
 export const receivePosts = (subreddit, json) => ({
   type: RECEIVE_POSTS,
   subreddit,
-  posts: json.data.children.map(child => child.data),
+  posts: transformResponseBody(json),
   receivedAt: Date.now()
 })
 
