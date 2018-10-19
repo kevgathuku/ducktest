@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const Picker = ({ value, onChange, options }) => (
+const Picker = ({ value, onChange, options }) => (
   <span>
     <h1>{value}</h1>
     <select onChange={e => onChange(e.target.value)}
